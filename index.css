@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.wrapper{
+    display: flex;
+    /* 排列方向（横／竖） */
+    /* flex-direction: row; */
+    /* 一行排不下如何换行 */
+    /* flex-wrap: wrap-reverse; */
+    /* 以上两行的简写 */
+    flex-flow: row wrap; 
+    /* 水平方向对齐方式 */
+    justify-content: space-between;
+    /* 垂直方向对齐方式 */
+    align-items: center;
+    /* 多行的垂直方向对齐方式 */
+    align-content: center;
+}
+.wrapper div{
+    border-radius: 5px;
+    background: #ccc;
+    text-align: center;
+    width: 200px;
+	height: 200px;
+    line-height: 200px;
+    margin: 0 5px 55px;
+}
+.one{
+    /* 数值越小，排列越靠前，默认为0。 */
+    order:4;
+    /* 占几份 */
+    flex-grow:1;
+}
+.two{
+    order:2;
+    flex-grow:2;
+    /* 项目的缩小比例，默认为1，即如果空间不足，该项目将缩小 ，如果设置为0 ，则不缩小 */
+    flex-shrink: 0;
+    /* 定义了在分配多余空间之前，项目占据的主轴空间，默认值为auto，即项目的本来大小。 */
+    flex-basis: 200px;
+    /* flex属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。 */
+    /* flex: 2 0 100px; */
+    /* 允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch。 */
+    align-self: 0;
+}
